@@ -13,7 +13,7 @@ angular.module('psJwtApp')
         
         $http.post(url, user)
         .success(function(resp) {
-            alert('success', 'OK!', 'You are now registered');
+            alert('success', 'Account created!', 'Welcome ' + resp.user.email + '!');
             authToken.setToken(resp.token);
         })
         .error(function (err) {
